@@ -1,16 +1,9 @@
-// Węzły: Artysta, Album, Utwór, Gatunek_muzyczny, Wytwórnia
+// Węzły: Artysta, Album, Utwór, Gatunek(Gatunek_muzyczny), Wytwórnia
 
-CREATE CONSTRAINT artysta_id IF NOT EXISTS
-FOR (a:Artysta) REQUIRE a.id IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (a:Artysta) REQUIRE a.artysta_id IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (al:Album) REQUIRE al.album_id IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (u:Utwor) REQUIRE u.utwor_id IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (g:Gatunek) REQUIRE g.gatunek_id IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (w:Wytwornia) REQUIRE w.wytwornia_id IS UNIQUE;
+CREATE INDEX IF NOT EXISTS FOR (a:Artysta) ON (a.nazwa);
 
-CREATE CONSTRAINT album_id IF NOT EXISTS
-FOR (a:Album) REQUIRE a.id IS UNIQUE;
-
-CREATE CONSTRAINT utwor_id IF NOT EXISTS
-FOR (u:Utwor) REQUIRE u.id IS UNIQUE;
-
-CREATE CONSTRAINT gatunek_id IF NOT EXISTS
-FOR (g:Gatunek_muzyczny) REQUIRE g.id IS UNIQUE;
-
-CREATE CONSTRAINT wytwornia_id IF NOT EXISTS
-FOR (w:Wytwornia) REQUIRE w.id IS UNIQUE;
