@@ -1,21 +1,21 @@
-artystaId,nazwa,kraj,czas_aktywnosci
-A1,Silver Echo,Polska,2012-
-A2,Neon Pulse,Niemcy,2010-
-A3,Crimson Wave,USA,2008-
-A4,Midnight Horizon,Polska,2016-
-A5,Golden Strings,Wielka Brytania,2005-
-A6,Blue Ember,Francja,2014-
-A7,Urban Flow,Polska,2011-
-A8,Silent Aurora,Norwegia,2009-
-A9,Electric Bloom,USA,2013-
-A10,Velvet Sky,Szwecja,2007-
-A11,Crystal Shade,Finlandia,2015-
-A12,Deep Valley,USA,2011-
-A13,Ocean Lights,Australia,2013-
-A14,Firestone Echo,Kanada,2010-
-A15,Neon Mirage,Polska,2018-
-A16,Golden Horizon,Irlandia,2006-
-A17,Blue Spectrum,Holandia,2012-
-A18,Urban Echo,Polska,2014-
-A19,Silent Pulse,Norwegia,2010-
-A20,Electric Horizon,USA,2015-
+artist_id,nazwa,kraj,aktywny_od,aktywny_do
+A1,Silver Echo,Polska,2012,2025
+A2,Neon Pulse,Niemcy,2010,
+A3,Crimson Wave,USA,2008,
+A4,Midnight Horizon,Polska,2016,2026
+A5,Golden Strings,Wielka Brytania,2005,
+A6,Blue Ember,Francja,2014,
+A7,Urban Flow,Polska,2011,
+A8,Silent Aurora,Norwegia,2009,
+A9,Electric Bloom,USA,2013,
+A10,Velvet Sky,Szwecja,2007,
+A11,Crystal Shade,Finlandia,2015,
+A12,Deep Valley,USA,2011,
+A13,Ocean Lights,Australia,2013,
+A14,Firestone Echo,Kanada,2010,
+A15,Neon Mirage,Polska,2018,
+A16,Golden Horizon,Irlandia,2006,
+A17,Blue Spectrum,Holandia,2012,
+A18,Urban Echo,Polska,2014,
+A19,Silent Pulse,Norwegia,2010,
+A20,Electric Horizon,USA,2015,

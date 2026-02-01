@@ -1,41 +1,41 @@
-utworId,tytul,dlugosc,numer_w_albumie
-U1,Fragments,210,1
-U2,Neon Skies,185,2
-U3,Tidal Motion,240,1
-U4,Deep Currents,260,2
-U5,Midnight Run,200,1
-U6,Silent Streets,230,2
-U7,Golden Hour,195,1
-U8,Strings of Time,250,2
-U9,Emberfall,220,1
-U10,Frozen Sparks,245,2
-U11,Metro Lines,210,1
-U12,Urban Nights,225,2
-U13,Arctic Wind,260,1
-U14,Crystal Horizon,240,2
-U15,Voltage,205,1
-U16,Electric Storm,230,2
-U17,Velvet Touch,215,1
-U18,Midnight Velvet,250,2
-U19,Shattered Echo,200,1
-U20,Digital Pulse,230,2
-U21,Ocean Breath,245,1
-U22,Waveform,220,2
-U23,Nightfall,210,1
-U24,Silent Echo,240,2
-U25,Golden Strings,200,1
-U26,Timeless,260,2
-U27,Firelight,230,1
-U28,Frostbite,250,2
-U29,City Lights,210,1
-U30,Urban Flow,225,2
-U31,Northern Wind,260,1
-U32,Silent Sky,240,2
-U33,Electric Pulse,205,1
-U34,Voltage II,230,2
-U35,Velvet Echo,215,1
-U36,Night Mirage,250,2
-U37,Crystal Waves,210,1
-U38,Deep Blue,225,2
-U39,Lightbeam,260,1
-U40,Firestorm,240,2
+utwor_id,tytul,dlugosc,numer_w_albumie,album_id
+U1,Fragments,210,1,AL1
+U2,Neon Skies,185,2,AL1
+U3,Tidal Motion,240,1,AL2
+U4,Deep Currents,260,2,AL2
+U5,Midnight Run,200,1,AL3
+U6,Silent Streets,230,2,AL3
+U7,Golden Hour,195,1,AL4
+U8,Strings of Time,250,2,AL4
+U9,Emberfall,220,1,AL5
+U10,Frozen Sparks,245,2,AL5
+U11,Metro Lines,210,1,AL6
+U12,Urban Nights,225,2,AL6
+U13,Arctic Wind,260,1,AL7
+U14,Crystal Horizon,240,2,AL7
+U15,Voltage,205,1,AL8
+U16,Electric Storm,230,2,AL8
+U17,Velvet Touch,215,1,AL9
+U18,Midnight Velvet,250,2,AL9
+U19,Shattered Echo,200,1,AL10
+U20,Digital Pulse,230,2,AL10
+U21,Ocean Breath,245,1,AL11
+U22,Waveform,220,2,AL11
+U23,Nightfall,210,1,AL12
+U24,Silent Echo,240,2,AL12
+U25,Golden Strings,200,1,AL13
+U26,Timeless,260,2,AL13
+U27,Firelight,230,1,AL14
+U28,Frostbite,250,2,AL14
+U29,City Lights,210,1,AL15
+U30,Urban Flow,225,2,AL15
+U31,Northern Wind,260,1,AL16
+U32,Silent Sky,240,2,AL16
+U33,Electric Pulse,205,1,AL17
+U34,Voltage II,230,2,AL17
+U35,Velvet Echo,215,1,AL18
+U36,Night Mirage,250,2,AL18
+U37,Crystal Waves,210,1,AL19
+U38,Deep Blue,225,2,AL19
+U39,Lightbeam,260,1,AL20
+U40,Firestorm,240,2,AL20

@@ -1,21 +1,21 @@
-albumId,tytul,rok
-AL1,Shattered Lights,2014
-AL2,Digital Dreams,2017
-AL3,Oceanic Pulse,2012
-AL4,Nocturnal Echoes,2019
-AL5,Golden Age,2007
-AL6,Fire & Frost,2016
-AL7,City Rhythms,2013
-AL8,Northern Silence,2011
-AL9,Electric Dawn,2015
-AL10,Velvet Nights,2009
-AL11,Crystal Echoes,2018
-AL12,Deep Horizons,2014
-AL13,Lightwaves,2016
-AL14,Firestone,2013
-AL15,Mirage Dreams,2020
-AL16,Golden Horizon,2008
-AL17,Blue Spectrum,2015
-AL18,Urban Echoes,2017
-AL19,Silent Motion,2012
-AL20,Electric Skies,2018
+album_id,tytul,rok,artysta_id,wytwornia_id
+AL1,Shattered Lights,2014,A1,W1
+AL2,Digital Dreams,2017,A2,W3
+AL3,Oceanic Pulse,2012,A3,W3
+AL4,Nocturnal Echoes,2019,A4,W1
+AL5,Golden Age,2007,A5,W4
+AL6,Fire & Frost,2016,A6,W5
+AL7,City Rhythms,2013,A7,W1
+AL8,Northern Silence,2011,A8,W2
+AL9,Electric Dawn,2015,A9,W3
+AL10,Velvet Nights,2009,A10,W4
+AL11,Crystal Echoes,2018,A11,W2
+AL12,Deep Horizons,2014,A12,W3
+AL13,Lightwaves,2016,A13,W4
+AL14,Firestone,2013,A14,W5
+AL15,Mirage Dreams,2020,A15,W1
+AL16,Golden Horizon,2008,A16,W4
+AL17,Blue Spectrum,2015,A17,W2
+AL18,Urban Echoes,2017,A18,W1
+AL19,Silent Motion,2012,A19,W2
+AL20,Electric Skies,2018,A20,W3
