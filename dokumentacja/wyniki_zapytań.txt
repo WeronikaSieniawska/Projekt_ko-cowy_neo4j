@@ -1,0 +1,392 @@
+1. Wszystkie albumy danego artysty
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:11
+album_id: "AL1"
+rok: 2014
+tytul: "Shattered Lights"
+
+2. Wszystkie utwory wykonane przez artyste
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:51
+dlugosc: 210
+numer_w_albumie: 1
+tytul: "Fragments"
+utwor_id: "U1"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:52
+dlugosc: 185
+numer_w_albumie: 2
+tytul: "Neon Skies"
+utwor_id: "U2"
+
+3. Wszystkie utwory, na których artysta wystąpił gościnnie (featured)
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:70
+dlugosc: 230
+numer_w_albumie: 2
+tytul: "Digital Pulse"
+utwor_id: "U20"
+
+4. Wszystkie utwory artysty
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:51
+dlugosc: 210
+numer_w_albumie: 1
+tytul: "Fragments"
+utwor_id: "U1"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:52
+dlugosc: 185
+numer_w_albumie: 2
+tytul: "Neon Skies"
+utwor_id: "U2"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:70
+dlugosc: 230
+numer_w_albumie: 2
+tytul: "Digital Pulse"
+utwor_id: "U20"
+
+5. Albumy i utwory artysty
+Albumy:
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:11
+album_id: "AL1"
+rok: 2014
+tytul: "Shattered Lights"
+
+Utwory:
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:51
+dlugosc: 210
+numer_w_albumie: 1
+tytul: "Fragments"
+utwor_id: "U1"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:52
+dlugosc: 185
+numer_w_albumie: 2
+tytul: "Neon Skies"
+utwor_id: "U2"
+
+6. Bezposrednie wspolprace artysty
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:32
+aktywny_od: "2010"
+artysta_id: "A2"
+kraj: "Niemcy"
+nazwa: "Neon Pulse"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:33
+aktywny_od: "2008"
+artysta_id: "A3"
+kraj: "USA"
+nazwa: "Crimson Wave"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:34
+aktywny_do: "2026"
+aktywny_od: "2016"
+artysta_id: "A4"
+kraj: "Polska"
+nazwa: "Midnight Horizon"
+
+7. Siec wspolpracy artysty (do 3 stopni oddalenia)
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:32
+aktywny_od: "2010"
+artysta_id: "A2"
+kraj: "Niemcy"
+nazwa: "Neon Pulse"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:33
+aktywny_od: "2008"
+artysta_id: "A3"
+kraj: "USA"
+nazwa: "Crimson Wave"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:34
+aktywny_do: "2026"
+aktywny_od: "2016"
+artysta_id: "A4"
+kraj: "Polska"
+nazwa: "Midnight Horizon"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:35
+aktywny_od: "2005"
+artysta_id: "A5"
+kraj: "Wielka Brytania"
+nazwa: "Golden Strings"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:41
+aktywny_od: "2015"
+artysta_id: "A11"
+kraj: "Finlandia"
+nazwa: "Crystal Shade"
+
+8. Liczba relacji wspolpracy
+Artysta              Liczba wspolprac
+"Silver Echo"               3
+"Neon Pulse"                2
+"Crimson Wave"              2
+"Golden Strings"            1
+"Crystal Shade"             1
+...
+
+9. Najkrotsza sciezka wspolpracy miedzy dwoma artystami
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:31
+aktywny_do: "2025"
+aktywny_od: "2012"
+artysta_id: "A1"
+kraj: "Polska"
+nazwa: "Silver Echo"
+
+COLLABORATED_WITH (
+    <id>: 5:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:1152928101676613663
+    notatki: "remix i live"
+    rok_pierwszej_wspolpracy: 2014
+)
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:32
+aktywny_od: "2010"
+artysta_id: "A2"
+kraj: "Niemcy"
+nazwa: "Neon Pulse"
+
+COLLABORATED_WITH (
+    <id>: 5:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:1152928101676613664
+    notatki: "gościnny refren"
+    rok_pierwszej_wspolpracy: 2016
+)
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:35
+aktywny_od: "2005"
+artysta_id: "A5"
+kraj: "Wielka Brytania"
+nazwa: "Golden Strings"
+
+10. Wszystkie utwory danego gatunku
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:51
+dlugosc: 210
+numer_w_albumie: 1
+tytul: "Fragments"
+utwor_id: "U1"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:52
+dlugosc: 185
+numer_w_albumie: 2
+tytul: "Neon Skies"
+utwor_id: "U2"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:61
+dlugosc: 210
+numer_w_albumie: 1
+tytul: "Metro Lines"
+utwor_id: "U11"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:62
+dlugosc: 225
+numer_w_albumie: 2
+tytul: "Urban Nights"
+utwor_id: "U12"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:65
+dlugosc: 205
+numer_w_albumie: 1
+tytul: "Voltage"
+utwor_id: "U15"
+
+...
+
+11. Artysci wykonujacy utwory w danym gatunku
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:31
+aktywny_do: "2025"
+aktywny_od: "2012"
+artysta_id: "A1"
+kraj: "Polska"
+nazwa: "Silver Echo"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:36
+aktywny_od: "2014"
+artysta_id: "A6"
+kraj: "Francja"
+nazwa: "Blue Ember"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:38
+aktywny_od: "2009"
+artysta_id: "A8"
+kraj: "Norwegia"
+nazwa: "Silent Aurora"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:41
+aktywny_od: "2015"
+artysta_id: "A11"
+kraj: "Finlandia"
+nazwa: "Crystal Shade"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:47
+aktywny_od: "2012"
+artysta_id: "A17"
+kraj: "Holandia"
+nazwa: "Blue Spectrum"
+
+12. Rekomendacje artystow na podstawie wspolnych gatunkow
+Artysci              Wspolne gatunki
+"Blue Spectrum"             6
+"Crystal Shade"
+
+"Blue Spectrum"             6
+"Silver Echo"
+
+"Blue Spectrum"             6
+"Blue Ember"
+
+"Blue Spectrum"             5
+"Silent Aurora"
+
+"Golden Strings"            4
+"Electric Horizon"
+
+"Neon Mirage"               4
+"Electric Bloom"
+
+"Neon Mirage"               4
+"Electric Horizon"
+
+"Electric Bloom"            4
+"Neon Mirage"
+
+"Electric Bloom"            4
+"Electric Horizon"
+
+"Golden Strings"            4
+"Electric Bloom"
+
+13. Gatunki najczęściej wykonywane przez artystów współpracujących ze sobą
+Artysci                 Gatunki
+"Silver Echo"       ["Ambient", "Rock", "Indie"]
+"Neon Pulse"        ["Elektronika", "Pop"]
+"Crimson Wave"      ["Elektronika"]
+"Golden Strings"    ["Ambient"]
+"Crystal Shade"     ["Rock"]
+"Midnight Horizon"  ["Elektronika"]
+...
+
+14. Artysci podpisani z daną wytwornia (Starline Records)
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:31
+aktywny_do: "2025"
+aktywny_od: "2012"
+artysta_id: "A1"
+kraj: "Polska"
+nazwa: "Silver Echo"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:34
+aktywny_do: "2026"
+aktywny_od: "2016"
+artysta_id: "A4"
+kraj: "Polska"
+nazwa: "Midnight Horizon"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:37
+aktywny_od: "2011"
+artysta_id: "A7"
+kraj: "Polska"
+nazwa: "Urban Flow"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:45
+aktywny_od: "2018"
+artysta_id: "A15"
+kraj: "Polska"
+nazwa: "Neon Mirage"
+
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:48
+aktywny_od: "2014"
+artysta_id: "A18"
+kraj: "Polska"
+nazwa: "Urban Echo"
+
+15. Wytwornie, z ktorymi wspolpracowal artysta
+<id>: 4:1b983bfa-a294-4d46-ac8a-e1f2e75d95a2:0
+kraj: "Polska"
+nazwa: "Starline Records"
+wytwornia_id: "W1"
+
+16. Wytwornie o najwiekszej roznorodnosci gatunkowej
+Wytwórnia              Liczba gatunkow
+"Starline Records"          6
+"Golden Era UK"             4
+"Electric Sun Studios"      4
+"BluePeak Music"            2
+"Firestone Music"           2
+
+17. Najpopularniejsze gatunki (liczba utworow)
+Gatunek              Liczba utworow
+"Elektronika"              10
+"Pop"                      8
+"Ambient"                  8
+"Indie"                    6
+"Rock"                     4
+"Synthwave"                4
+
+18. Artysci z najwieksza liczba utworow (PERFORMED)
+Artysta              Liczba utworow
+"Silver Echo"               2
+"Neon Pulse"                2
+"Crimson Wave"              2
+...
+
+19. Albumy z najwieksza liczba utworow
+Album               Liczba utworow
+"Shattered Lights"          2  
+"Digital Dreams"            2
+"Oceanic Pulse"             2
+...
+
+20. Utwory z gościnnymi wystepami
+Utwor                   Goscinnie
+"Arctic Wind"       ["Firelight", "Frostbite"]
+"Crystal Horizon"   ["City Lights", "Urban Flow"]
+"Deep Currents"     ["Emberfall", "Frozen Sparks"]
+"Digital Pulse"     ["Fragments", "Neon Skies"]
+"Electric Storm"    ["Electric Pulse", "Voltage II"]
+"Emberfall"         ["Shattered Echo", "Digital Pulse"]
+"Fragments"         ["Tidal Motion", "Deep Currents"]
+...
+
+21. Artysci, ktorzy wspolpracowali z najwieksza liczba innych artystow
+Artysta              Liczba wspolprac
+"Silver Echo"               3
+"Neon Pulse"                2
+"Crimson Wave"              2
+"Golden Strings"            1
+"Crystal Shade"             1
+"Midnight Horizon"          1
+"Urban Flow"                1
+...
+
+22. Utwory artysty wraz z gatunkami
+Utwor                   Gatunki
+"Fragments"         ["Elektronika"]
+"Neon Skies"        ["Elektronika"]
+
+23. Artysci, ktorzy najczesciej wspolpracuja z artystami z innych gatunkow
+Artysta                 Liczba wspolprac z innymi gatunkami
+"Silver Echo"               3
+"Neon Pulse"                2
+"Crimson Wave"              2
+"Golden Strings"            1
+...
+
+24. Najbardziej wplywowe utwory (najwiecej powiazan)
+Utwor           Powiazania
+"Fragments"         3
+"Neon Skies"        3   
+"Tidal Motion"      3
+...
+
+25. Wytwornie z najwieksza liczba artystow
+Wytwornia              Liczba artystow
+"Starline Records"          5
+
+26. Dodanie nowego artysty wraz z automatycznym przypisaniem do wytworni
+Created 1 node, created 1 relationship, set 4 properties, added 1 label
+
+27. Dodanie albumu i automatyczne powiazanie go z artysta oraz utworami
+Created 3 nodes, created 3 relationships, set 11 properties, added 3 labels
+
+28. Dodanie wspolpracy miedzy artystami tylko wtedy, gdy jeszcze nie istnieje
+Created 1 relationship, set 2 properties
+
+33. Przeniesienie artysty do innej wytworni
+Created 1 relationship, deleted 1 relationship
