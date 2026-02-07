@@ -1,63 +1,112 @@
+-- Wytwornie muzyczne
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/wytwornie.csv" AS row
+
+WITH row, TRIM(row.wytwornia_id) AS wytworniaID
+WHERE wytworniaID <> ""
+
+MERGE (w:Wytwórnia {wytwornia_id: wytworniaID})
+SET w.nazwa = row.nazwa,
+    w.kraj = row.kraj;
+
+-- Gatunki muzyczne
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/gatunki.csv" AS row
+
+WITH row, TRIM(row.gatunek_id) AS gatunekID
+WHERE gatunekID <> ""
+
+MERGE (g:Gatunek {gatunek_id: gatunekID})
+SET g.nazwa = row.nazwa;
+
 -- Artysci
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/artysci.csv" AS row
-MERGE (a:Artysta {artysta_id: row.artysta_id})
-SET a.nazwa = row.nazwa, a.kraj = row.kraj, a.aktywny_od = row.aktywny_od, a.aktywny_do = row.aktywny_do;
+
+WITH row, TRIM(row.artysta_id) AS artystaID
+WHERE artystaID <> ""
+
+MERGE (a:Artysta {artysta_id: artystaID})
+SET a.nazwa = row.nazwa,
+    a.kraj = row.kraj,
+    a.aktywny_od = row.aktywny_od,
+    a.aktywny_do = row.aktywny_do;
+;
 
 -- Albumy i relacje CREATED oraz SIGNED_TO
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/albumy.csv" AS row
-MERGE (al:Album {album_id: row.album_id})
-SET al.tytul = row.tytul, al.rok = toInteger(row.rok)
-WITH al,row
-MATCH (a:Artysta {artysta_id: row.artysta_id})
+
+WITH row,
+     TRIM(row.album_id) AS albumID,
+     TRIM(row.artysta_id) AS artystaID,
+     TRIM(row.wytwornia_id) AS wytworniaID
+
+MERGE (al:Album {album_id: albumID})
+SET al.tytul = row.tytul,
+    al.rok = toInteger(row.rok)
+
+WITH al, artystaID, wytworniaID
+MATCH (a:Artysta {artysta_id: artystaID})
 MERGE (a)-[:CREATED]->(al)
-WITH al,row
-MATCH (w:Wytwornia {wytwornia_id: row.wytwornia_id})
+
+WITH al, wytworniaID, a
+MATCH (w:Wytwórnia {wytwornia_id: wytworniaID})
 MERGE (a)-[:SIGNED_TO]->(w);
 
 -- Utwory i relacja CONTAINS
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/utwory.csv" AS row
-MERGE (u:Utwor {utwor_id: row.utwor_id})
-SET u.tytul = row.tytul, u.dlugosc = toInteger(row.dlugosc_sec), u.numer_w_albumie = toInteger(row.numer_w_albumie)
-WITH u,row
+
+WITH row, TRIM(row.utwor_id) AS utworID
+WHERE utworID <> ""
+
+MERGE (u:Utwór {utwor_id: utworID})
+SET u.tytul = row.tytul,
+    u.dlugosc = toInteger(row.dlugosc),
+    u.numer_w_albumie = toInteger(row.numer_w_albumie)
+
+WITH u, row
 MATCH (al:Album {album_id: row.album_id})
 MERGE (al)-[:CONTAINS]->(u);
 
--- Gatunki muzyczne
-LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/gatunki.csv" AS row
-MERGE (g:Gatunek {gatunek_id: row.gatunek_id})
-SET g.nazwa = row.nazwa;
-
--- Wytwornie muzyczne
-LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/wytwornie.csv" AS row
-MERGE (w:Wytwórnia {wytwornia_id: row.wytwornia_id})
-SET w.nazwa = row.nazwa, w.kraj = row.kraj;
-
 -- Wykonania PERFORMED i FEATURED_ON
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/wykonania.csv" AS row
-MATCH (u:Utwor {utwor_id: row.utwor_id})
-MATCH (a:Artysta {artysta_id: row.artysta_id})
-CALL {
-  WITH a,u,row
-  WHERE row.rola = 'main'
-  MERGE (a)-[:PERFORMED]->(u)
-  RETURN 1
-  UNION
-  WITH a,u,row
-  WHERE row.rola = 'featured'
-  MERGE (a)-[:FEATURED_ON]->(u)
-  RETURN 1
-}
-RETURN count(*) AS loaded;
 
--- Gatunki utworow IN_GENRE
+WITH row,
+     TRIM(row.utwor_id) AS utworID,
+     TRIM(row.artysta_id) AS artystaID
+WHERE utworID <> "" AND artystaID <> ""
+
+MATCH (u:Utwór {utwor_id: utworID})
+MATCH (a:Artysta {artysta_id: artystaID})
+
+FOREACH (_ IN CASE WHEN row.rola = 'main' THEN [1] ELSE [] END |
+    MERGE (a)-[:PERFORMED]->(u)
+)
+
+FOREACH (_ IN CASE WHEN row.rola = 'featured' THEN [1] ELSE [] END |
+    MERGE (a)-[:FEATURED_ON]->(u)
+);
+
+-- Gatunki utworow  IN_GENRE
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/utwor_gatunek.csv" AS row
-MATCH (u:Utwor {utwor_id: row.utwor_id})
-MATCH (g:Gatunek {gatunek_id: row.gatunek_id})
+
+WITH row,
+     TRIM(row.utwor_id) AS utworID,
+     TRIM(row.gatunek_id) AS gatunekID
+WHERE utworID <> "" AND gatunekID <> ""
+
+MATCH (u:Utwór {utwor_id: utworID})
+MATCH (g:Gatunek {gatunek_id: gatunekID})
 MERGE (u)-[:IN_GENRE]->(g);
 
 -- Wspolprace COLLABORATED_WITH
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/WeronikaSieniawska/Projekt_ko-cowy_neo4j/main/dane/wspolprace.csv" AS row
-MATCH (a:Artysta {artysta_id: row.artysta_id_a})
-MATCH (b:Artysta {artysta_id: row.artysta_id_b})
+
+WITH row,
+     TRIM(row.artysta_id_a) AS artystaA,
+     TRIM(row.artysta_id_b) AS artystaB
+WHERE artystaA <> "" AND artystaB <> ""
+
+MATCH (a:Artysta {artysta_id: artystaA})
+MATCH (b:Artysta {artysta_id: artystaB})
+
 MERGE (a)-[r:COLLABORATED_WITH]-(b)
-SET r.rok_pierwszej_wspolpracy = toInteger(row.rok_pierwszej_wspolpracy), r.notatki = row.notatki;
+SET r.rok_pierwszej_wspolpracy = toInteger(row.rok_pierwszej_wspolpracy),
+    r.notatki = row.notatki;
